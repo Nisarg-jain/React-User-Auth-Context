@@ -1,16 +1,39 @@
-# React + Vite
+# React User Authentication Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, lightweight user authentication interface built using **React (Vite)**, the **React Context API** for global state management, and **Tailwind CSS** for modern utility-first styling. 
 
-Currently, two official plugins are available:
+This project demonstrates a clean implementation of client-side authentication routing, secure state components, conditional rendering, and form input validation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Global State Management:** Utilizes React Context API (`useContext`) to manage user authentication sessions seamlessly across components without prop drilling.
+* **Conditional Rendering:** Dynamically toggles between a modern Login Card view and a personalized User Dashboard view based on active session state.
+* **Form Validation:** Built-in validation mechanism preventing submission on empty inputs for both username and password fields.
+* **Sleek Modern UI:** Completely styled using **Tailwind CSS**, featuring high-contrast typography, interactive input focuses, subtle drop-shadow panels, and dynamic user avatar badges.
+* **Semantic UX Elements:** Uses HTML5 form submissions allowing native features like hitting the `Enter` key to sign in.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+* **Frontend Library:** React (Vite template)
+* **State Architecture:** React Context API
+* **Styling Engine:** Tailwind CSS
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/
+│   ├── Login.jsx               # Validated login form component
+│   └── Profile.jsx             # Protected user dashboard view
+├── context/
+│   ├── UserContext.js          # Context initialization
+│   └── UserContextProvider.jsx # Global state provider wrapper
+├── App.jsx                     # Root layout with conditional routing
+├── main.jsx                    # Entry point
+└── index.css                   # Tailwind directives
